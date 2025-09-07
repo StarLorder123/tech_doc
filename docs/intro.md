@@ -1,47 +1,60 @@
 ---
+title: 个人知识库介绍
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 个人专业知识库
 
-Let's discover **Docusaurus in less than 5 minutes**.
+欢迎来到我的个人技术知识库！这是一个基于 **Docusaurus** 构建的知识分享平台。
 
-## Getting Started
+## 📚 知识库简介
 
-Get started by **creating a new site**.
+这是我的个人专业知识库，用于记录、整理和分享在技术学习过程中积累的知识和经验。通过系统化的文档组织，我希望能够更好地沉淀所学知识，同时也为有需要的朋友提供参考和帮助。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 🎯 知识库特色
 
-### What you'll need
+- **📝 个人笔记**：记录学习过程中的重要知识点和心得体会
+- **🔍 便于检索**：结构化组织，方便快速查找和复习
+- **📱 随时访问**：支持多设备访问，随时随地查阅资料
+- **🌙 护眼模式**：支持深色模式，适合长时间阅读
+- **⚡ 持续更新**：随着学习的深入，不断补充和完善内容
+- **💡 实例丰富**：包含实际代码示例和实践经验
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## 📚 知识领域
 
-## Generate a new site
+### TypeScript & JavaScript
+- **基础语法**：数据类型、变量声明、运算符等核心概念
+- **进阶内容**：类型系统、接口、泛型等高级特性
+- **实践经验**：开发中遇到的问题和解决方案
 
-Generate a new Docusaurus site using the **classic template**.
+### Rust（学习中）
+- 系统级编程语言的学习笔记
+- 内存安全、并发编程等特色功能探索
 
-The classic template will automatically be added to your project after you run the command:
+### 持续扩展
+随着技术栈的拓展，会持续添加新的知识领域！
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## 🎯 适合人群
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- **技术学习者**：正在学习相关技术的朋友
+- **经验分享者**：希望了解他人学习经验的开发者
+- **知识回顾者**：需要快速复习技术要点的同行
+- **我自己**：作为个人知识管理和复习的工具
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## 🌟 使用建议
 
-## Start your site
+1. **按需查阅**：根据你的学习需要选择相应的知识点
+2. **结合实践**：配合代码示例进行动手练习
+3. **定期回顾**：利用结构化的组织定期复习巩固
+4. **交流讨论**：欢迎就内容进行交流和讨论
 
-Run the development server:
+## 🚀 开始探索
 
-```bash
-cd my-website
-npm run start
-```
+选择你感兴趣的技术领域，开始知识之旅吧！
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+- [TypeScript & JavaScript 基础知识](./typescript&javascript/base.md)
+- 更多内容持续更新中...
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+---
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+💡 **说明**：这个知识库会随着我的学习进展不断更新和完善，如果你发现有用的内容，欢迎收藏和分享！
