@@ -362,3 +362,293 @@ function addNumbers(...nums:number[]) {
 ``` javascript
 var res = function( [arguments] ) { ... }
 ```
+
+## 2.7 常用数据类型
+
+### 2.7.1 Number 类型
+
+#### 2.7.1.1 Number 对象属性
+
+| 序号 | 属性 | 描述 |
+|------|------|------|
+| 1 | `MAX_VALUE` | 可表示的最大的数，MAX_VALUE 属性值接近于 1.79E+308。大于 MAX_VALUE 的值代表 "Infinity" |
+| 2 | `MIN_VALUE` | 可表示的最小的数，即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MIN_VALUE，MIN_VALUE 的值约为 5e-324。小于 MIN_VALUE ("underflow values") 的值将会转换为 0 |
+| 3 | `NaN` | 非数字值（Not-A-Number） |
+| 4 | `NEGATIVE_INFINITY` | 负无穷大，溢出时返回该值。该值小于 MIN_VALUE |
+| 5 | `POSITIVE_INFINITY` | 正无穷大，溢出时返回该值。该值大于 MAX_VALUE |
+| 6 | `prototype` | Number 对象的静态属性。使您有能力向对象添加属性和方法 |
+| 7 | `constructor` | 返回对创建此对象的 Number 函数的引用 |
+#### 2.7.1.2 Number 对象方法
+
+| 序号 | 方法 | 描述 | 示例 |
+|------|------|------|------|
+| 1 | `toExponential()` | 把对象的值转换为指数计数法 | `var num1 = 1225.30; var val = num1.toExponential(); console.log(val); // 1.2253e+3` |
+| 2 | `toFixed()` | 把数字转换为字符串，并对小数点指定位数 | `var num3 = 177.234; console.log(num3.toFixed(2)); // 177.23` |
+| 3 | `toLocaleString()` | 把数字转换为字符串，使用本地数字格式顺序 | `var num = new Number(177.1234); console.log(num.toLocaleString()); // 177.1234` |
+| 4 | `toPrecision()` | 把数字格式化为指定的长度 | `var num = new Number(7.123456); console.log(num.toPrecision(2)); // 7.1` |
+| 5 | `toString()` | 把数字转换为字符串，使用指定的基数。数字的基数是 2 ~ 36 之间的整数。若省略该参数，则使用基数 10 | `var num = new Number(10); console.log(num.toString(2)); // 1010` |
+| 6 | `valueOf()` | 返回一个 Number 对象的原始数字值 | `var num = new Number(10); console.log(num.valueOf()); // 10` |
+### 2.7.2 String 类型
+
+#### 2.7.2.1 String 对象属性
+
+| 序号 | 属性 | 描述 | 示例 |
+|------|------|------|------|
+| 1 | `constructor` | 对创建该对象的函数的引用 | `var str = new String("This is string"); console.log(str.constructor); // function String() { [native code] }` |
+| 2 | `length` | 返回字符串的长度 | `var uname = new String("Hello World"); console.log(uname.length); // 11` |
+| 3 | `prototype` | 允许您向对象添加属性和方法 | `function employee(id:number, name:string) { this.id = id; this.name = name; }` |
+#### 2.7.2.2 String 对象方法
+
+| 序号 | 方法 | 描述 | 示例 |
+|------|------|------|------|
+| 1 | `charAt()` | 返回在指定位置的字符 | `var str = new String("RUNOOB"); console.log(str.charAt(0)); // R` |
+| 2 | `charCodeAt()` | 返回在指定的位置的字符的 Unicode 编码 | `var str = new String("RUNOOB"); console.log(str.charCodeAt(0)); // 82` |
+| 3 | `concat()` | 连接两个或更多字符串，并返回新的字符串 | `var str1 = "RUNOOB"; var str2 = "GOOGLE"; console.log(str1.concat(str2)); // RUNOOBGOOGLE` |
+| 4 | `indexOf()` | 返回某个指定的字符串值在字符串中首次出现的位置 | `var str1 = "RUNOOB"; console.log(str1.indexOf("OO")); // 3` |
+| 5 | `lastIndexOf()` | 从后向前搜索字符串，并从起始位置（0）开始计算返回字符串最后出现的位置 | `var str1 = "This is string one and again string"; console.log(str1.lastIndexOf("string")); // 29` |
+| 6 | `localeCompare()` | 用本地特定的顺序来比较两个字符串 | `var str1 = "This is beautiful string"; console.log(str1.localeCompare("This is beautiful string")); // 0` |
+| 7 | `match()` | 查找找到一个或多个正则表达式的匹配 | `var str = "The rain in SPAIN stays mainly in the plain"; var n = str.match(/ain/g); // ["ain","ain","ain"]` |
+| 8 | `replace()` | 替换与正则表达式匹配的子串 | `var str = "zara ali"; var newstr = str.replace(/(\w+)\s(\w+)/, "$2, $1"); console.log(newstr); // ali, zara` |
+| 9 | `search()` | 检索与正则表达式相匹配的值 | `var str = "Apples are round"; console.log(str.search(/apples/gi)); // 0` |
+| 10 | `slice()` | 提取字符串的片断，并在新的字符串中返回被提取的部分 | `var str = "Hello World"; console.log(str.slice(0, 5)); // Hello` |
+| 11 | `split()` | 把字符串分割为子字符串数组 | `var str = "Apples are round"; var splitted = str.split(" ", 3); // ["Apples", "are", "round"]` |
+| 12 | `substr()` | 从起始索引号提取字符串中指定数目的字符 | `var str = "Hello World"; console.log(str.substr(6, 5)); // World` |
+| 13 | `substring()` | 提取字符串中两个指定的索引号之间的字符 | `var str = "RUNOOB GOOGLE"; console.log(str.substring(1, 2)); // U` |
+| 14 | `toLocaleLowerCase()` | 根据主机的语言环境把字符串转换为小写 | `var str = "Runoob Google"; console.log(str.toLocaleLowerCase()); // runoob google` |
+| 15 | `toLocaleUpperCase()` | 根据主机的语言环境把字符串转换为大写 | `var str = "Runoob Google"; console.log(str.toLocaleUpperCase()); // RUNOOB GOOGLE` |
+| 16 | `toLowerCase()` | 把字符串转换为小写 | `var str = "Runoob Google"; console.log(str.toLowerCase()); // runoob google` |
+| 17 | `toString()` | 返回字符串 | `var str = "Runoob"; console.log(str.toString()); // Runoob` |
+| 18 | `toUpperCase()` | 把字符串转换为大写 | `var str = "Runoob Google"; console.log(str.toUpperCase()); // RUNOOB GOOGLE` |
+| 19 | `valueOf()` | 返回指定字符串对象的原始值 | `var str = new String("Runoob"); console.log(str.valueOf()); // Runoob` |
+### 2.7.3 Array 类型
+
+#### 2.7.3.1 数组声明语法
+
+TypeScript 声明数组的语法格式如下所示：
+
+```typescript
+// 方式1：先声明后初始化
+var array_name: datatype[];
+array_name = [val1, val2, valn..];
+
+// 方式2：声明时直接初始化
+var array_name: datatype[] = [val1, val2, valn..];
+
+// 方式3：使用 Array 对象创建数组
+var arr_names: number[] = new Array(4);
+
+for(var i = 0; i < arr_names.length; i++) { 
+    arr_names[i] = i * 2;
+    console.log(arr_names[i]);
+}
+```
+
+Array 对象的构造函数接受以下两种值：
+- 表示数组大小的数值
+- 初始化的数组列表，元素使用逗号分隔值
+#### 2.7.3.2 Array 对象方法
+
+| 序号 | 方法 | 描述 | 示例 |
+|------|------|------|------|
+| 1 | `concat()` | 连接两个或更多的数组，并返回结果 | `var alpha = ["a", "b", "c"]; var numeric = [1, 2, 3]; var result = alpha.concat(numeric); // ["a","b","c",1,2,3]` |
+| 2 | `every()` | 检测数值元素的每个元素是否都符合条件 | `var passed = [12, 5, 8, 130, 44].every(x => x >= 10); // false` |
+| 3 | `filter()` | 检测数值元素，并返回符合条件所有元素的数组 | `var passed = [12, 5, 8, 130, 44].filter(x => x >= 10); // [12, 130, 44]` |
+| 4 | `forEach()` | 数组每个元素都执行一次回调函数 | `let num = [7, 8, 9]; num.forEach(value => console.log(value)); // 7 8 9` |
+| 5 | `indexOf()` | 搜索数组中的元素，并返回它所在的位置。如果搜索不到，返回值 -1 | `var index = [12, 5, 8, 130, 44].indexOf(8); // 2` |
+| 6 | `join()` | 把数组的所有元素放入一个字符串 | `var arr = ["Google","Runoob","Taobao"]; var str = arr.join(", "); // "Google, Runoob, Taobao"` |
+| 7 | `lastIndexOf()` | 返回一个指定的字符串值最后出现的位置 | `var index = [12, 5, 8, 130, 44].lastIndexOf(8); // 2` |
+| 8 | `map()` | 通过指定函数处理数组的每个元素，并返回处理后的数组 | `var numbers = [1, 4, 9]; var roots = numbers.map(Math.sqrt); // [1, 2, 3]` |
+| 9 | `pop()` | 删除数组的最后一个元素并返回删除的元素 | `var numbers = [1, 4, 9]; var element = numbers.pop(); // 9` |
+| 10 | `push()` | 向数组的末尾添加一个或更多元素，并返回新的长度 | `var numbers = [1, 4, 9]; var length = numbers.push(10); // 4` |
+| 11 | `reduce()` | 将数组元素计算为一个值（从左到右） | `var total = [0, 1, 2, 3].reduce((a, b) => a + b); // 6` |
+| 12 | `reduceRight()` | 将数组元素计算为一个值（从右到左） | `var total = [0, 1, 2, 3].reduceRight((a, b) => a + b); // 6` |
+| 13 | `reverse()` | 反转数组的元素顺序 | `var arr = [0, 1, 2, 3].reverse(); // [3, 2, 1, 0]` |
+| 14 | `shift()` | 删除并返回数组的第一个元素 | `var arr = [10, 1, 2, 3]; var shifted = arr.shift(); // 10` |
+| 15 | `slice()` | 选取数组的的一部分，并返回一个新数组 | `var arr = ["orange", "mango", "banana"]; arr.slice(1, 3); // ["mango", "banana"]` |
+| 16 | `some()` | 检测数组元素中是否有元素符合指定条件 | `var result = [2, 5, 8, 1, 4].some(x => x >= 10); // false` |
+| 17 | `sort()` | 对数组的元素进行排序 | `var arr = ["orange", "mango", "banana"]; arr.sort(); // ["banana", "mango", "orange"]` |
+| 18 | `splice()` | 从数组中添加或删除元素 | `var arr = ["orange", "mango", "banana"]; arr.splice(1, 0, "apple"); // 在索引1处插入"apple"` |
+| 19 | `toString()` | 把数组转换为字符串，并返回结果 | `var arr = ["orange", "mango", "banana"]; arr.toString(); // "orange,mango,banana"` |
+| 20 | `unshift()` | 向数组的开头添加一个或更多元素，并返回新的长度 | `var arr = ["orange", "mango"]; var length = arr.unshift("water"); // 3` |
+### 2.7.4 Map 对象
+
+Map 对象保存键值对，并且能够记住键的原始插入顺序。任何值(对象或者原始值) 都可以作为一个键或一个值。Map 是 ES6 中引入的一种新的数据结构。
+
+#### 2.7.4.1 创建和初始化 Map
+
+```typescript
+// 创建空 Map
+let myMap = new Map();
+
+// 初始化 Map
+let myMap = new Map([
+    ["key1", "value1"],
+    ["key2", "value2"]
+]);
+```
+
+#### 2.7.4.2 Map 相关的函数与属性
+
+| 方法/属性 | 描述 | 示例 |
+|-----------|------|------|
+| `map.clear()` | 移除 Map 对象的所有键/值对 | `myMap.clear();` |
+| `map.set(key, value)` | 设置键值对，返回该 Map 对象 | `myMap.set("name", "张三");` |
+| `map.get(key)` | 返回键对应的值，如果不存在，则返回 undefined | `let name = myMap.get("name");` |
+| `map.has(key)` | 返回一个布尔值，用于判断 Map 中是否包含键对应的值 | `if (myMap.has("name")) { ... }` |
+| `map.delete(key)` | 删除 Map 中的元素，删除成功返回 true，失败返回 false | `myMap.delete("name");` |
+| `map.size` | 返回 Map 对象键/值对的数量 | `console.log(myMap.size);` |
+| `map.keys()` | 返回一个 Iterator 对象，包含了 Map 对象中每个元素的键 | `for (let key of myMap.keys()) { ... }` |
+| `map.values()` | 返回一个新的Iterator对象，包含了Map对象中每个元素的值 | `for (let value of myMap.values()) { ... }` |
+#### 2.7.4.3 迭代 Map
+
+Map 对象中的元素是按顺序插入的，我们可以迭代 Map 对象，每一次迭代返回 [key, value] 数组。TypeScript 使用 `for...of` 来实现迭代：
+
+```typescript
+let nameSiteMapping = new Map();
+
+nameSiteMapping.set("Google", 1);
+nameSiteMapping.set("Runoob", 2);
+nameSiteMapping.set("Taobao", 3);
+
+// 迭代 Map 中的 key
+for (let key of nameSiteMapping.keys()) {
+  console.log(key);                  
+}
+
+// 迭代 Map 中的 value
+for (let value of nameSiteMapping.values()) {
+  console.log(value);                 
+}
+
+// 迭代 Map 中的 key => value
+for (let entry of nameSiteMapping.entries()) {
+  console.log(entry[0], entry[1]);   
+}
+
+// 使用对象解析
+for (let [key, value] of nameSiteMapping) {
+  console.log(key, value);            
+}
+```
+### 2.7.5 TypeScript 元组
+
+#### 2.7.5.1 创建元组
+
+创建元组的语法格式如下：
+
+```typescript
+var tuple_name = [value1, value2, value3, ...value_n];
+```
+
+#### 2.7.5.2 访问元组
+
+元组中元素使用索引来访问，第一个元素的索引值为 0，第二个为 1，以此类推第 n 个为 n-1，语法格式如下:
+
+```typescript
+tuple_name[index]
+```
+
+#### 2.7.5.3 操作元组
+
+使用以下两个函数向元组添加新元素或者删除元素：
+
+- `push()` - 向元组添加元素，添加在最后面
+- `pop()` - 从元组中移除元素（最后一个），并返回移除的元素
+
+#### 2.7.5.4 更新元组
+
+元组是可变的，这意味着我们可以对元组进行更新操作：
+
+```typescript
+var mytuple = [10, "Runoob", "Taobao", "Google"]; // 创建一个元组
+console.log("元组的第一个元素为：" + mytuple[0]); 
+
+// 更新元组元素
+mytuple[0] = 121;     
+console.log("元组中的第一个元素更新为："+ mytuple[0]);
+```
+
+#### 2.7.5.5 解构元组
+
+把元组元素赋值给变量：
+
+```typescript
+var a = [10, "Runoob"];
+var [b, c] = a;
+console.log(b);    // 10
+console.log(c);    // Runoob
+```
+### 2.7.6 TypeScript 联合类型
+
+#### 2.7.6.1 联合类型概述
+
+联合类型（Union Types）可以通过管道(`|`)将变量设置多种类型，赋值时可以根据设置的类型来赋值。
+
+**注意**：只能赋值指定的类型，如果赋值其它类型就会报错。
+
+#### 2.7.6.2 语法格式
+
+创建联合类型的语法格式如下：
+
+```typescript
+Type1 | Type2 | Type3
+```
+
+#### 2.7.6.3 示例
+
+```typescript
+// 声明联合类型变量
+let value: string | number;
+
+// 可以赋值为字符串
+value = "hello";
+console.log(value); // hello
+
+// 可以赋值为数字
+value = 123;
+console.log(value); // 123
+
+// 错误：不能赋值为布尔类型
+// value = true; // Error: Type 'boolean' is not assignable to type 'string | number'
+``` 
+## 2.8 接口
+
+### 2.8.1 接口概述
+
+接口是一系列抽象方法的声明，是一些方法特征的集合，这些方法都应该是抽象的，需要由具体的类去实现，然后第三方就可以通过这组抽象方法调用，让具体的类执行具体的方法。
+
+### 2.8.2 接口定义
+
+TypeScript 接口定义如下：
+
+```typescript
+interface interface_name { 
+    // 属性和方法声明
+}
+```
+
+### 2.8.3 接口继承
+
+#### 2.8.3.1 继承概述
+
+接口继承就是说接口可以通过其他接口来扩展自己。TypeScript 允许接口继承多个接口。
+
+#### 2.8.3.2 继承语法
+
+继承使用关键字 `extends`。
+
+**单接口继承语法格式：**
+
+```typescript
+interface Child_interface_name extends Super_interface_name {
+    // 扩展的属性和方法
+}
+```
+
+**多接口继承语法格式：**
+
+```typescript
+interface Child_interface_name extends Super_interface_name1, Super_interface_name2 {
+    // 扩展的属性和方法
+}
+```
