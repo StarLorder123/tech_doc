@@ -32,19 +32,19 @@ greet("John");
 
 ## 2.1 基本数据类型
 
-| 数据类型 | 关键字 | 说明 |
-|---------|-------|------|
-| 任意类型 | `any` | 声明为 any 的变量可以赋予任意类型的值。 |
-| 数字类型 | `number` | 双精度 64 位浮点值。它可以用来表示整数和分数。 |
-| 字符串类型 | `string` | 一个字符系列，使用单引号（'）或双引号（"）来表示字符串类型。反引号（`）来定义多行文本和内嵌表达式。 |
-| 布尔类型 | `boolean` | 表示逻辑值：true 和 false。 |
-| 数组类型 | 无 | 声明变量为数组。 |
-| 元组 | 无 | 元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同。 |
-| 枚举 | `enum` | 枚举类型用于定义数值集合。 |
-| void | `void` | 用于标识方法返回值的类型，表示该方法没有返回值。 |
-| null | `null` | 表示对象值缺失。 |
-| undefined | `undefined` | 用于初始化变量为一个未定义的值 |
-| never | `never` | never 是其它类型（包括 null 和 undefined）的子类型，代表从不会出现的值。 |
+| 数据类型   | 关键字      | 说明                                                                                                |
+| ---------- | ----------- | --------------------------------------------------------------------------------------------------- |
+| 任意类型   | `any`       | 声明为 any 的变量可以赋予任意类型的值。                                                             |
+| 数字类型   | `number`    | 双精度 64 位浮点值。它可以用来表示整数和分数。                                                      |
+| 字符串类型 | `string`    | 一个字符系列，使用单引号（'）或双引号（"）来表示字符串类型。反引号（`）来定义多行文本和内嵌表达式。 |
+| 布尔类型   | `boolean`   | 表示逻辑值：true 和 false。                                                                         |
+| 数组类型   | 无          | 声明变量为数组。                                                                                    |
+| 元组       | 无          | 元组类型用来表示已知元素数量和类型的数组，各元素的类型不必相同，对应位置的类型需要相同。            |
+| 枚举       | `enum`      | 枚举类型用于定义数值集合。                                                                          |
+| void       | `void`      | 用于标识方法返回值的类型，表示该方法没有返回值。                                                    |
+| null       | `null`      | 表示对象值缺失。                                                                                    |
+| undefined  | `undefined` | 用于初始化变量为一个未定义的值                                                                      |
+| never      | `never`     | never 是其它类型（包括 null 和 undefined）的子类型，代表从不会出现的值。                            |
 
 ## 2.2 变量声明
 
@@ -72,56 +72,56 @@ greet("John");
 
 ### 2.3.1 算术运算符
 
-| 运算符 | 描述 | 例子 |
-|--------|------|------|
-| `+` | 加法 | `x = y + 2` |
-| `-` | 减法 | `x = y - 2` |
-| `*` | 乘法 | `x = y * 2` |
-| `/` | 除法 | `x = y / 2` |
-| `%` | 取模（余数） | `x = y % 2` |
-| `++` | 自增 | `x = ++y` |
-| `--` | 自减 | `x = --y` |
+| 运算符 | 描述         | 例子        |
+| ------ | ------------ | ----------- |
+| `+`    | 加法         | `x = y + 2` |
+| `-`    | 减法         | `x = y - 2` |
+| `*`    | 乘法         | `x = y * 2` |
+| `/`    | 除法         | `x = y / 2` |
+| `%`    | 取模（余数） | `x = y % 2` |
+| `++`   | 自增         | `x = ++y`   |
+| `--`   | 自减         | `x = --y`   |
 
 ### 2.3.2 关系运算符
 
-| 运算符 | 描述 | 比较 | 返回值 |
-|--------|------|------|--------|
-| `==` | 等于 | `x == 8` | `false` |
-| `!=` | 不等于 | `x != 8` | `true` |
-| `>` | 大于 | `x > 8` | `false` |
-| `<` | 小于 | `x < 8` | `true` |
-| `>=` | 大于或等于 | `x >= 8` | `false` |
-| `<=` | 小于或等于 | `x <= 8` | `true` |
+| 运算符 | 描述       | 比较     | 返回值  |
+| ------ | ---------- | -------- | ------- |
+| `==`   | 等于       | `x == 8` | `false` |
+| `!=`   | 不等于     | `x != 8` | `true`  |
+| `>`    | 大于       | `x > 8`  | `false` |
+| `<`    | 小于       | `x < 8`  | `true`  |
+| `>=`   | 大于或等于 | `x >= 8` | `false` |
+| `<=`   | 小于或等于 | `x <= 8` | `true`  |
 
 ### 2.3.3 逻辑运算符
 
-| 运算符 | 描述 | 例子 |
-|--------|------|------|
-| `&&` | and | `(x < 10 && y > 1)` 为 `true` |
-| `\|\|` | or | `(x == 5 \|\| y == 5)` 为 `false` |
-| `!` | not | `!(x == y)` 为 `true` |
+| 运算符 | 描述 | 例子                              |
+| ------ | ---- | --------------------------------- |
+| `&&`   | and  | `(x < 10 && y > 1)` 为 `true`     |
+| `\|\|` | or   | `(x == 5 \|\| y == 5)` 为 `false` |
+| `!`    | not  | `!(x == y)` 为 `true`             |
 
 ### 2.3.4 位运算符
 
-| 运算符 | 描述 | 例子 | 类似于 |
-|--------|------|------|--------|
-| `&` | AND，按位与处理两个长度相同的二进制数，两个相应的二进位都为 1，该位的结果值才为 1，否则为 0 | `x = 5 & 1` | `0101 & 0001` |
-| `\|` | OR，按位或处理两个长度相同的二进制数，两个相应的二进位中只要有一个为 1，该位的结果值为 1 | `x = 5 \| 1` | `0101 \| 0001` |
-| `~` | 取反，取反是一元运算符，对一个二进制数的每一位执行逻辑反操作。使数字 1 成为 0，0 成为 1 | `x = ~5` | `~0101` |
-| `^` | 异或，按位异或运算，对等长二进制模式按位或二进制数的每一位执行逻辑异按位或操作。操作的结果是如果某位不同则该位为 1，否则该位为 0 | `x = 5 ^ 1` | `0101 ^ 0001` |
-| `<<` | 左移，把 &lt;&lt; 左边的运算数的各二进位全部左移若干位，由 &lt;&lt; 右边的数指定移动的位数，高位丢弃，低位补 0 | `x = 5 << 1` | `0101 << 1` |
-| `>>` | 右移，把 &gt;&gt; 左边的运算数的各二进位全部右移若干位，&gt;&gt; 右边的数指定移动的位数 | `x = 5 >> 1` | `0101 >> 1` |
-| `>>>` | 无符号右移，与有符号右移位类似，除了左边一律使用0 补位 | `x = 2 >>> 1` | `0010 >>> 1` |
+| 运算符 | 描述                                                                                                                             | 例子          | 类似于         |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------- | -------------- |
+| `&`    | AND，按位与处理两个长度相同的二进制数，两个相应的二进位都为 1，该位的结果值才为 1，否则为 0                                      | `x = 5 & 1`   | `0101 & 0001`  |
+| `\|`   | OR，按位或处理两个长度相同的二进制数，两个相应的二进位中只要有一个为 1，该位的结果值为 1                                         | `x = 5 \| 1`  | `0101 \| 0001` |
+| `~`    | 取反，取反是一元运算符，对一个二进制数的每一位执行逻辑反操作。使数字 1 成为 0，0 成为 1                                          | `x = ~5`      | `~0101`        |
+| `^`    | 异或，按位异或运算，对等长二进制模式按位或二进制数的每一位执行逻辑异按位或操作。操作的结果是如果某位不同则该位为 1，否则该位为 0 | `x = 5 ^ 1`   | `0101 ^ 0001`  |
+| `<<`   | 左移，把 &lt;&lt; 左边的运算数的各二进位全部左移若干位，由 &lt;&lt; 右边的数指定移动的位数，高位丢弃，低位补 0                   | `x = 5 << 1`  | `0101 << 1`    |
+| `>>`   | 右移，把 &gt;&gt; 左边的运算数的各二进位全部右移若干位，&gt;&gt; 右边的数指定移动的位数                                          | `x = 5 >> 1`  | `0101 >> 1`    |
+| `>>>`  | 无符号右移，与有符号右移位类似，除了左边一律使用0 补位                                                                           | `x = 2 >>> 1` | `0010 >>> 1`   |
 
 ### 2.3.5 赋值运算符
 
-| 运算符 | 例子 | 实例 | x 值 |
-|--------|------|------|------|
-| `=` (赋值) | `x = y` | `x = y` | `x = 5` |
+| 运算符                    | 例子     | 实例        | x 值     |
+| ------------------------- | -------- | ----------- | -------- |
+| `=` (赋值)                | `x = y`  | `x = y`     | `x = 5`  |
 | `+=` (先进行加运算后赋值) | `x += y` | `x = x + y` | `x = 15` |
-| `-=` (先进行减运算后赋值) | `x -= y` | `x = x - y` | `x = 5` |
+| `-=` (先进行减运算后赋值) | `x -= y` | `x = x - y` | `x = 5`  |
 | `*=` (先进行乘运算后赋值) | `x *= y` | `x = x * y` | `x = 50` |
-| `/=` (先进行除运算后赋值) | `x /= y` | `x = x / y` | `x = 2` |
+| `/=` (先进行除运算后赋值) | `x /= y` | `x = x / y` | `x = 2`  |
 
 ### 2.3.6 三元运算符
 - 三元运算有 3 个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。
@@ -369,57 +369,57 @@ var res = function( [arguments] ) { ... }
 
 #### 2.7.1.1 Number 对象属性
 
-| 序号 | 属性 | 描述 |
-|------|------|------|
-| 1 | `MAX_VALUE` | 可表示的最大的数，MAX_VALUE 属性值接近于 1.79E+308。大于 MAX_VALUE 的值代表 "Infinity" |
-| 2 | `MIN_VALUE` | 可表示的最小的数，即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MIN_VALUE，MIN_VALUE 的值约为 5e-324。小于 MIN_VALUE ("underflow values") 的值将会转换为 0 |
-| 3 | `NaN` | 非数字值（Not-A-Number） |
-| 4 | `NEGATIVE_INFINITY` | 负无穷大，溢出时返回该值。该值小于 MIN_VALUE |
-| 5 | `POSITIVE_INFINITY` | 正无穷大，溢出时返回该值。该值大于 MAX_VALUE |
-| 6 | `prototype` | Number 对象的静态属性。使您有能力向对象添加属性和方法 |
-| 7 | `constructor` | 返回对创建此对象的 Number 函数的引用 |
+| 序号 | 属性                | 描述                                                                                                                                                             |
+| ---- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | `MAX_VALUE`         | 可表示的最大的数，MAX_VALUE 属性值接近于 1.79E+308。大于 MAX_VALUE 的值代表 "Infinity"                                                                           |
+| 2    | `MIN_VALUE`         | 可表示的最小的数，即最接近 0 的正数 (实际上不会变成 0)。最大的负数是 -MIN_VALUE，MIN_VALUE 的值约为 5e-324。小于 MIN_VALUE ("underflow values") 的值将会转换为 0 |
+| 3    | `NaN`               | 非数字值（Not-A-Number）                                                                                                                                         |
+| 4    | `NEGATIVE_INFINITY` | 负无穷大，溢出时返回该值。该值小于 MIN_VALUE                                                                                                                     |
+| 5    | `POSITIVE_INFINITY` | 正无穷大，溢出时返回该值。该值大于 MAX_VALUE                                                                                                                     |
+| 6    | `prototype`         | Number 对象的静态属性。使您有能力向对象添加属性和方法                                                                                                            |
+| 7    | `constructor`       | 返回对创建此对象的 Number 函数的引用                                                                                                                             |
 #### 2.7.1.2 Number 对象方法
 
-| 序号 | 方法 | 描述 | 示例 |
-|------|------|------|------|
-| 1 | `toExponential()` | 把对象的值转换为指数计数法 | `var num1 = 1225.30; var val = num1.toExponential(); console.log(val); // 1.2253e+3` |
-| 2 | `toFixed()` | 把数字转换为字符串，并对小数点指定位数 | `var num3 = 177.234; console.log(num3.toFixed(2)); // 177.23` |
-| 3 | `toLocaleString()` | 把数字转换为字符串，使用本地数字格式顺序 | `var num = new Number(177.1234); console.log(num.toLocaleString()); // 177.1234` |
-| 4 | `toPrecision()` | 把数字格式化为指定的长度 | `var num = new Number(7.123456); console.log(num.toPrecision(2)); // 7.1` |
-| 5 | `toString()` | 把数字转换为字符串，使用指定的基数。数字的基数是 2 ~ 36 之间的整数。若省略该参数，则使用基数 10 | `var num = new Number(10); console.log(num.toString(2)); // 1010` |
-| 6 | `valueOf()` | 返回一个 Number 对象的原始数字值 | `var num = new Number(10); console.log(num.valueOf()); // 10` |
+| 序号 | 方法               | 描述                                                                                            | 示例                                                                                 |
+| ---- | ------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| 1    | `toExponential()`  | 把对象的值转换为指数计数法                                                                      | `var num1 = 1225.30; var val = num1.toExponential(); console.log(val); // 1.2253e+3` |
+| 2    | `toFixed()`        | 把数字转换为字符串，并对小数点指定位数                                                          | `var num3 = 177.234; console.log(num3.toFixed(2)); // 177.23`                        |
+| 3    | `toLocaleString()` | 把数字转换为字符串，使用本地数字格式顺序                                                        | `var num = new Number(177.1234); console.log(num.toLocaleString()); // 177.1234`     |
+| 4    | `toPrecision()`    | 把数字格式化为指定的长度                                                                        | `var num = new Number(7.123456); console.log(num.toPrecision(2)); // 7.1`            |
+| 5    | `toString()`       | 把数字转换为字符串，使用指定的基数。数字的基数是 2 ~ 36 之间的整数。若省略该参数，则使用基数 10 | `var num = new Number(10); console.log(num.toString(2)); // 1010`                    |
+| 6    | `valueOf()`        | 返回一个 Number 对象的原始数字值                                                                | `var num = new Number(10); console.log(num.valueOf()); // 10`                        |
 ### 2.7.2 String 类型
 
 #### 2.7.2.1 String 对象属性
 
-| 序号 | 属性 | 描述 | 示例 |
-|------|------|------|------|
-| 1 | `constructor` | 对创建该对象的函数的引用 | `var str = new String("This is string"); console.log(str.constructor); // function String() { [native code] }` |
-| 2 | `length` | 返回字符串的长度 | `var uname = new String("Hello World"); console.log(uname.length); // 11` |
-| 3 | `prototype` | 允许您向对象添加属性和方法 | `function employee(id:number, name:string) { this.id = id; this.name = name; }` |
+| 序号 | 属性          | 描述                       | 示例                                                                                                           |
+| ---- | ------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 1    | `constructor` | 对创建该对象的函数的引用   | `var str = new String("This is string"); console.log(str.constructor); // function String() { [native code] }` |
+| 2    | `length`      | 返回字符串的长度           | `var uname = new String("Hello World"); console.log(uname.length); // 11`                                      |
+| 3    | `prototype`   | 允许您向对象添加属性和方法 | `function employee(id:number, name:string) { this.id = id; this.name = name; }`                                |
 #### 2.7.2.2 String 对象方法
 
-| 序号 | 方法 | 描述 | 示例 |
-|------|------|------|------|
-| 1 | `charAt()` | 返回在指定位置的字符 | `var str = new String("RUNOOB"); console.log(str.charAt(0)); // R` |
-| 2 | `charCodeAt()` | 返回在指定的位置的字符的 Unicode 编码 | `var str = new String("RUNOOB"); console.log(str.charCodeAt(0)); // 82` |
-| 3 | `concat()` | 连接两个或更多字符串，并返回新的字符串 | `var str1 = "RUNOOB"; var str2 = "GOOGLE"; console.log(str1.concat(str2)); // RUNOOBGOOGLE` |
-| 4 | `indexOf()` | 返回某个指定的字符串值在字符串中首次出现的位置 | `var str1 = "RUNOOB"; console.log(str1.indexOf("OO")); // 3` |
-| 5 | `lastIndexOf()` | 从后向前搜索字符串，并从起始位置（0）开始计算返回字符串最后出现的位置 | `var str1 = "This is string one and again string"; console.log(str1.lastIndexOf("string")); // 29` |
-| 6 | `localeCompare()` | 用本地特定的顺序来比较两个字符串 | `var str1 = "This is beautiful string"; console.log(str1.localeCompare("This is beautiful string")); // 0` |
-| 7 | `match()` | 查找找到一个或多个正则表达式的匹配 | `var str = "The rain in SPAIN stays mainly in the plain"; var n = str.match(/ain/g); // ["ain","ain","ain"]` |
-| 8 | `replace()` | 替换与正则表达式匹配的子串 | `var str = "zara ali"; var newstr = str.replace(/(\w+)\s(\w+)/, "$2, $1"); console.log(newstr); // ali, zara` |
-| 9 | `search()` | 检索与正则表达式相匹配的值 | `var str = "Apples are round"; console.log(str.search(/apples/gi)); // 0` |
-| 10 | `slice()` | 提取字符串的片断，并在新的字符串中返回被提取的部分 | `var str = "Hello World"; console.log(str.slice(0, 5)); // Hello` |
-| 11 | `split()` | 把字符串分割为子字符串数组 | `var str = "Apples are round"; var splitted = str.split(" ", 3); // ["Apples", "are", "round"]` |
-| 12 | `substr()` | 从起始索引号提取字符串中指定数目的字符 | `var str = "Hello World"; console.log(str.substr(6, 5)); // World` |
-| 13 | `substring()` | 提取字符串中两个指定的索引号之间的字符 | `var str = "RUNOOB GOOGLE"; console.log(str.substring(1, 2)); // U` |
-| 14 | `toLocaleLowerCase()` | 根据主机的语言环境把字符串转换为小写 | `var str = "Runoob Google"; console.log(str.toLocaleLowerCase()); // runoob google` |
-| 15 | `toLocaleUpperCase()` | 根据主机的语言环境把字符串转换为大写 | `var str = "Runoob Google"; console.log(str.toLocaleUpperCase()); // RUNOOB GOOGLE` |
-| 16 | `toLowerCase()` | 把字符串转换为小写 | `var str = "Runoob Google"; console.log(str.toLowerCase()); // runoob google` |
-| 17 | `toString()` | 返回字符串 | `var str = "Runoob"; console.log(str.toString()); // Runoob` |
-| 18 | `toUpperCase()` | 把字符串转换为大写 | `var str = "Runoob Google"; console.log(str.toUpperCase()); // RUNOOB GOOGLE` |
-| 19 | `valueOf()` | 返回指定字符串对象的原始值 | `var str = new String("Runoob"); console.log(str.valueOf()); // Runoob` |
+| 序号 | 方法                  | 描述                                                                  | 示例                                                                                                          |
+| ---- | --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 1    | `charAt()`            | 返回在指定位置的字符                                                  | `var str = new String("RUNOOB"); console.log(str.charAt(0)); // R`                                            |
+| 2    | `charCodeAt()`        | 返回在指定的位置的字符的 Unicode 编码                                 | `var str = new String("RUNOOB"); console.log(str.charCodeAt(0)); // 82`                                       |
+| 3    | `concat()`            | 连接两个或更多字符串，并返回新的字符串                                | `var str1 = "RUNOOB"; var str2 = "GOOGLE"; console.log(str1.concat(str2)); // RUNOOBGOOGLE`                   |
+| 4    | `indexOf()`           | 返回某个指定的字符串值在字符串中首次出现的位置                        | `var str1 = "RUNOOB"; console.log(str1.indexOf("OO")); // 3`                                                  |
+| 5    | `lastIndexOf()`       | 从后向前搜索字符串，并从起始位置（0）开始计算返回字符串最后出现的位置 | `var str1 = "This is string one and again string"; console.log(str1.lastIndexOf("string")); // 29`            |
+| 6    | `localeCompare()`     | 用本地特定的顺序来比较两个字符串                                      | `var str1 = "This is beautiful string"; console.log(str1.localeCompare("This is beautiful string")); // 0`    |
+| 7    | `match()`             | 查找找到一个或多个正则表达式的匹配                                    | `var str = "The rain in SPAIN stays mainly in the plain"; var n = str.match(/ain/g); // ["ain","ain","ain"]`  |
+| 8    | `replace()`           | 替换与正则表达式匹配的子串                                            | `var str = "zara ali"; var newstr = str.replace(/(\w+)\s(\w+)/, "$2, $1"); console.log(newstr); // ali, zara` |
+| 9    | `search()`            | 检索与正则表达式相匹配的值                                            | `var str = "Apples are round"; console.log(str.search(/apples/gi)); // 0`                                     |
+| 10   | `slice()`             | 提取字符串的片断，并在新的字符串中返回被提取的部分                    | `var str = "Hello World"; console.log(str.slice(0, 5)); // Hello`                                             |
+| 11   | `split()`             | 把字符串分割为子字符串数组                                            | `var str = "Apples are round"; var splitted = str.split(" ", 3); // ["Apples", "are", "round"]`               |
+| 12   | `substr()`            | 从起始索引号提取字符串中指定数目的字符                                | `var str = "Hello World"; console.log(str.substr(6, 5)); // World`                                            |
+| 13   | `substring()`         | 提取字符串中两个指定的索引号之间的字符                                | `var str = "RUNOOB GOOGLE"; console.log(str.substring(1, 2)); // U`                                           |
+| 14   | `toLocaleLowerCase()` | 根据主机的语言环境把字符串转换为小写                                  | `var str = "Runoob Google"; console.log(str.toLocaleLowerCase()); // runoob google`                           |
+| 15   | `toLocaleUpperCase()` | 根据主机的语言环境把字符串转换为大写                                  | `var str = "Runoob Google"; console.log(str.toLocaleUpperCase()); // RUNOOB GOOGLE`                           |
+| 16   | `toLowerCase()`       | 把字符串转换为小写                                                    | `var str = "Runoob Google"; console.log(str.toLowerCase()); // runoob google`                                 |
+| 17   | `toString()`          | 返回字符串                                                            | `var str = "Runoob"; console.log(str.toString()); // Runoob`                                                  |
+| 18   | `toUpperCase()`       | 把字符串转换为大写                                                    | `var str = "Runoob Google"; console.log(str.toUpperCase()); // RUNOOB GOOGLE`                                 |
+| 19   | `valueOf()`           | 返回指定字符串对象的原始值                                            | `var str = new String("Runoob"); console.log(str.valueOf()); // Runoob`                                       |
 ### 2.7.3 Array 类型
 
 #### 2.7.3.1 数组声明语法
@@ -448,28 +448,28 @@ Array 对象的构造函数接受以下两种值：
 - 初始化的数组列表，元素使用逗号分隔值
 #### 2.7.3.2 Array 对象方法
 
-| 序号 | 方法 | 描述 | 示例 |
-|------|------|------|------|
-| 1 | `concat()` | 连接两个或更多的数组，并返回结果 | `var alpha = ["a", "b", "c"]; var numeric = [1, 2, 3]; var result = alpha.concat(numeric); // ["a","b","c",1,2,3]` |
-| 2 | `every()` | 检测数值元素的每个元素是否都符合条件 | `var passed = [12, 5, 8, 130, 44].every(x => x >= 10); // false` |
-| 3 | `filter()` | 检测数值元素，并返回符合条件所有元素的数组 | `var passed = [12, 5, 8, 130, 44].filter(x => x >= 10); // [12, 130, 44]` |
-| 4 | `forEach()` | 数组每个元素都执行一次回调函数 | `let num = [7, 8, 9]; num.forEach(value => console.log(value)); // 7 8 9` |
-| 5 | `indexOf()` | 搜索数组中的元素，并返回它所在的位置。如果搜索不到，返回值 -1 | `var index = [12, 5, 8, 130, 44].indexOf(8); // 2` |
-| 6 | `join()` | 把数组的所有元素放入一个字符串 | `var arr = ["Google","Runoob","Taobao"]; var str = arr.join(", "); // "Google, Runoob, Taobao"` |
-| 7 | `lastIndexOf()` | 返回一个指定的字符串值最后出现的位置 | `var index = [12, 5, 8, 130, 44].lastIndexOf(8); // 2` |
-| 8 | `map()` | 通过指定函数处理数组的每个元素，并返回处理后的数组 | `var numbers = [1, 4, 9]; var roots = numbers.map(Math.sqrt); // [1, 2, 3]` |
-| 9 | `pop()` | 删除数组的最后一个元素并返回删除的元素 | `var numbers = [1, 4, 9]; var element = numbers.pop(); // 9` |
-| 10 | `push()` | 向数组的末尾添加一个或更多元素，并返回新的长度 | `var numbers = [1, 4, 9]; var length = numbers.push(10); // 4` |
-| 11 | `reduce()` | 将数组元素计算为一个值（从左到右） | `var total = [0, 1, 2, 3].reduce((a, b) => a + b); // 6` |
-| 12 | `reduceRight()` | 将数组元素计算为一个值（从右到左） | `var total = [0, 1, 2, 3].reduceRight((a, b) => a + b); // 6` |
-| 13 | `reverse()` | 反转数组的元素顺序 | `var arr = [0, 1, 2, 3].reverse(); // [3, 2, 1, 0]` |
-| 14 | `shift()` | 删除并返回数组的第一个元素 | `var arr = [10, 1, 2, 3]; var shifted = arr.shift(); // 10` |
-| 15 | `slice()` | 选取数组的的一部分，并返回一个新数组 | `var arr = ["orange", "mango", "banana"]; arr.slice(1, 3); // ["mango", "banana"]` |
-| 16 | `some()` | 检测数组元素中是否有元素符合指定条件 | `var result = [2, 5, 8, 1, 4].some(x => x >= 10); // false` |
-| 17 | `sort()` | 对数组的元素进行排序 | `var arr = ["orange", "mango", "banana"]; arr.sort(); // ["banana", "mango", "orange"]` |
-| 18 | `splice()` | 从数组中添加或删除元素 | `var arr = ["orange", "mango", "banana"]; arr.splice(1, 0, "apple"); // 在索引1处插入"apple"` |
-| 19 | `toString()` | 把数组转换为字符串，并返回结果 | `var arr = ["orange", "mango", "banana"]; arr.toString(); // "orange,mango,banana"` |
-| 20 | `unshift()` | 向数组的开头添加一个或更多元素，并返回新的长度 | `var arr = ["orange", "mango"]; var length = arr.unshift("water"); // 3` |
+| 序号 | 方法            | 描述                                                          | 示例                                                                                                               |
+| ---- | --------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| 1    | `concat()`      | 连接两个或更多的数组，并返回结果                              | `var alpha = ["a", "b", "c"]; var numeric = [1, 2, 3]; var result = alpha.concat(numeric); // ["a","b","c",1,2,3]` |
+| 2    | `every()`       | 检测数值元素的每个元素是否都符合条件                          | `var passed = [12, 5, 8, 130, 44].every(x => x >= 10); // false`                                                   |
+| 3    | `filter()`      | 检测数值元素，并返回符合条件所有元素的数组                    | `var passed = [12, 5, 8, 130, 44].filter(x => x >= 10); // [12, 130, 44]`                                          |
+| 4    | `forEach()`     | 数组每个元素都执行一次回调函数                                | `let num = [7, 8, 9]; num.forEach(value => console.log(value)); // 7 8 9`                                          |
+| 5    | `indexOf()`     | 搜索数组中的元素，并返回它所在的位置。如果搜索不到，返回值 -1 | `var index = [12, 5, 8, 130, 44].indexOf(8); // 2`                                                                 |
+| 6    | `join()`        | 把数组的所有元素放入一个字符串                                | `var arr = ["Google","Runoob","Taobao"]; var str = arr.join(", "); // "Google, Runoob, Taobao"`                    |
+| 7    | `lastIndexOf()` | 返回一个指定的字符串值最后出现的位置                          | `var index = [12, 5, 8, 130, 44].lastIndexOf(8); // 2`                                                             |
+| 8    | `map()`         | 通过指定函数处理数组的每个元素，并返回处理后的数组            | `var numbers = [1, 4, 9]; var roots = numbers.map(Math.sqrt); // [1, 2, 3]`                                        |
+| 9    | `pop()`         | 删除数组的最后一个元素并返回删除的元素                        | `var numbers = [1, 4, 9]; var element = numbers.pop(); // 9`                                                       |
+| 10   | `push()`        | 向数组的末尾添加一个或更多元素，并返回新的长度                | `var numbers = [1, 4, 9]; var length = numbers.push(10); // 4`                                                     |
+| 11   | `reduce()`      | 将数组元素计算为一个值（从左到右）                            | `var total = [0, 1, 2, 3].reduce((a, b) => a + b); // 6`                                                           |
+| 12   | `reduceRight()` | 将数组元素计算为一个值（从右到左）                            | `var total = [0, 1, 2, 3].reduceRight((a, b) => a + b); // 6`                                                      |
+| 13   | `reverse()`     | 反转数组的元素顺序                                            | `var arr = [0, 1, 2, 3].reverse(); // [3, 2, 1, 0]`                                                                |
+| 14   | `shift()`       | 删除并返回数组的第一个元素                                    | `var arr = [10, 1, 2, 3]; var shifted = arr.shift(); // 10`                                                        |
+| 15   | `slice()`       | 选取数组的的一部分，并返回一个新数组                          | `var arr = ["orange", "mango", "banana"]; arr.slice(1, 3); // ["mango", "banana"]`                                 |
+| 16   | `some()`        | 检测数组元素中是否有元素符合指定条件                          | `var result = [2, 5, 8, 1, 4].some(x => x >= 10); // false`                                                        |
+| 17   | `sort()`        | 对数组的元素进行排序                                          | `var arr = ["orange", "mango", "banana"]; arr.sort(); // ["banana", "mango", "orange"]`                            |
+| 18   | `splice()`      | 从数组中添加或删除元素                                        | `var arr = ["orange", "mango", "banana"]; arr.splice(1, 0, "apple"); // 在索引1处插入"apple"`                      |
+| 19   | `toString()`    | 把数组转换为字符串，并返回结果                                | `var arr = ["orange", "mango", "banana"]; arr.toString(); // "orange,mango,banana"`                                |
+| 20   | `unshift()`     | 向数组的开头添加一个或更多元素，并返回新的长度                | `var arr = ["orange", "mango"]; var length = arr.unshift("water"); // 3`                                           |
 ### 2.7.4 Map 对象
 
 Map 对象保存键值对，并且能够记住键的原始插入顺序。任何值(对象或者原始值) 都可以作为一个键或一个值。Map 是 ES6 中引入的一种新的数据结构。
@@ -489,16 +489,16 @@ let myMap = new Map([
 
 #### 2.7.4.2 Map 相关的函数与属性
 
-| 方法/属性 | 描述 | 示例 |
-|-----------|------|------|
-| `map.clear()` | 移除 Map 对象的所有键/值对 | `myMap.clear();` |
-| `map.set(key, value)` | 设置键值对，返回该 Map 对象 | `myMap.set("name", "张三");` |
-| `map.get(key)` | 返回键对应的值，如果不存在，则返回 undefined | `let name = myMap.get("name");` |
-| `map.has(key)` | 返回一个布尔值，用于判断 Map 中是否包含键对应的值 | `if (myMap.has("name")) { ... }` |
-| `map.delete(key)` | 删除 Map 中的元素，删除成功返回 true，失败返回 false | `myMap.delete("name");` |
-| `map.size` | 返回 Map 对象键/值对的数量 | `console.log(myMap.size);` |
-| `map.keys()` | 返回一个 Iterator 对象，包含了 Map 对象中每个元素的键 | `for (let key of myMap.keys()) { ... }` |
-| `map.values()` | 返回一个新的Iterator对象，包含了Map对象中每个元素的值 | `for (let value of myMap.values()) { ... }` |
+| 方法/属性             | 描述                                                  | 示例                                        |
+| --------------------- | ----------------------------------------------------- | ------------------------------------------- |
+| `map.clear()`         | 移除 Map 对象的所有键/值对                            | `myMap.clear();`                            |
+| `map.set(key, value)` | 设置键值对，返回该 Map 对象                           | `myMap.set("name", "张三");`                |
+| `map.get(key)`        | 返回键对应的值，如果不存在，则返回 undefined          | `let name = myMap.get("name");`             |
+| `map.has(key)`        | 返回一个布尔值，用于判断 Map 中是否包含键对应的值     | `if (myMap.has("name")) { ... }`            |
+| `map.delete(key)`     | 删除 Map 中的元素，删除成功返回 true，失败返回 false  | `myMap.delete("name");`                     |
+| `map.size`            | 返回 Map 对象键/值对的数量                            | `console.log(myMap.size);`                  |
+| `map.keys()`          | 返回一个 Iterator 对象，包含了 Map 对象中每个元素的键 | `for (let key of myMap.keys()) { ... }`     |
+| `map.values()`        | 返回一个新的Iterator对象，包含了Map对象中每个元素的值 | `for (let value of myMap.values()) { ... }` |
 #### 2.7.4.3 迭代 Map
 
 Map 对象中的元素是按顺序插入的，我们可以迭代 Map 对象，每一次迭代返回 [key, value] 数组。TypeScript 使用 `for...of` 来实现迭代：
@@ -652,3 +652,133 @@ interface Child_interface_name extends Super_interface_name1, Super_interface_na
     // 扩展的属性和方法
 }
 ```
+
+## 2.9 类
+- TypeScript 是面向对象的 JavaScript。
+- 类描述了所创建的对象共同的属性和方法。
+- TypeScript 支持面向对象的所有特性，比如 类、接口等。
+- TypeScript 类定义方式如下：
+``` javascript
+class class_name { 
+    // 类作用域
+}
+```
+- 定义类的关键字为 class，后面紧跟类名，类可以包含以下几个模块（类的数据成员）：
+  - 字段 − 字段是类里面声明的变量。字段表示对象的有关数据。
+  - 构造函数 − 类实例化时调用，可以为类的对象分配内存。
+  - 方法 − 方法为对象要执行的操作。
+- 使用 new 关键字来实例化类的对象，语法格式如下：
+``` javascript
+var object_name = new class_name([ arguments ])
+```
+- TypeScript 支持继承类，即我们可以在创建类的时候继承一个已存在的类，这个已存在的类称为父类，继承它的类称为子类。
+- 类继承使用关键字 extends，子类除了不能继承父类的私有成员(方法和属性)和构造函数，其他的都可以继承。
+- TypeScript 一次只能继承一个类，不支持继承多个类，但 TypeScript 支持多重继承（A 继承 B，B 继承 C）。
+- 类继承后，子类可以对父类的方法重新定义，这个过程称之为方法的重写。
+- static 关键字用于定义类的数据成员（属性和方法）为静态的，静态成员可以直接通过类名调用。
+- 在类中，使用#+函数名，表示为类内的私有方法，不能被外部调用只能被内部调用。调用的时候，也需要将#带上。
+
+## 2.10 模块
+- TypeScript 模块的设计理念是可以更换的组织代码。
+- 模块是在其自身的作用域里执行，并不是在全局作用域，这意味着定义在模块里面的变量、函数和类等在模块外部是不可见的，除非明确地使用 export 导出它们。类似地，我们必须通过 import 导入其他模块导出的变量、函数、类等。
+- 两个模块之间的关系是通过在文件级别上使用 import 和 export 建立的。
+- 模块使用模块加载器去导入其它的模块。 在运行时，模块加载器的作用是在执行此模块代码前去查找并执行这个模块的所有依赖。 大家最熟知的JavaScript模块加载器是服务于 Node.js 的 CommonJS 和服务于 Web 应用的 Require.js。
+
+## 2.11 声明文件
+- TypeScript 作为 JavaScript 的超集，在开发过程中不可避免要引用其他第三方的 JavaScript 的库。虽然通过直接引用可以调用库的类和方法，但是却无法使用TypeScript 诸如类型检查等特性功能。为了解决这个问题，需要将这些库里的函数和方法体去掉后只保留导出类型声明，而产生了一个描述 JavaScript 库和模块信息的声明文件。通过引用这个声明文件，就可以借用 TypeScript 的各种特性来使用库文件了。
+- 示例
+
+``` javascript
+declare module Runoob { 
+   export class Calc { 
+      doSum(limit:number) : number; 
+   }
+}
+/// <reference path = "Calc.d.ts" /> 
+var obj = new Runoob.Calc(); 
+// obj.doSum("Hello"); // 编译错误
+console.log(obj.doSum(10));
+```
+
+# 3. 构建TypeScript项目
+
+## 3.1 初始化项目
+```
+mkdir ts-project && cd ts-project && npm init -y && npm i typescript -D && npx tsc --init
+```
+- 这条命令的意思是在当前目录下创建一个 ts-project 目录，然后进入 ts-project 目录执行 npm init -y 初始话目录产生 package.json 文件，之后运行 npm i typescript -D 在开发环境安装 typescript 包，之后执行 npx tsc --init 生成 tsconfig.json 文件
+- 之后所有的操作都以 ts-project 为根目录
+```
+mkdir src && touch src/index.ts
+```
+- 新建 src 目录作为项目的源码目录（开发目录），并在 src 目录下创建 index.ts 文件作为项目的入口文件
+## 3.2 设置 tsconfig.json
+
+- 如果一个目录下存在 tsconfig.json 文件，那就意味着这个目录是 typescirpt 项目的根目录，tsconfig.json 文件中指定了用来编译项目的根文件和编译选项，使用 tsc --init 生成的 tsconfig.json 文件包含了大量的选项，其中大部分都被注释掉了，一般我们只需要配置如下内容即可：
+```
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "inlineSourceMap":true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "stripInternal": true,
+    "pretty": true,
+    "declaration": true,
+    "outDir": "lib",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}
+```
+
+## 3.3 开发环境准备
+```
+npm i @types/node -D
+```
+- 这个是 node.js 的类型定义包
+```
+npm i ts-node-dev -D
+```
+- 在 package.json 的 scripts 中增加如下内容
+```
+{
+  "scripts": {
+    "dev:comment": "启动开发环境",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+  }
+}
+```
+- 执行 npm run dev 即可启动开发环境，并且修改文件时可实时编译
+
+## 3.4 保证代码质量
+- 代码质量对于一个系统的可维护性、可迭代性至关重要，特别是在多人协作一个大型项目中，如果没有把控代码质量的工具，每人一套编码风格，这样的系统在后期的维护难度可想而知，基本上会成为一个难以迭代升级的祖传系统，除了重写别无他法。
+- 因此控制代码质量的工具应运而生，而 ESLint 当属其中的佼佼者，熬死了各路的竞争者；typescript 之前还在使用 TSLint，但在 2019 年 1 月 官方决定全面采用 ESLint 作为代码检查工具。
+- 采用社区的开源配置方案 eslint-config-standard，简单直接，足以 hold 住大部分项目了
+```
+npx eslint --init
+```
+- 以上流程走完以后在项目根目录会多出来一个 .eslintrc.js 文件，接下来在 package.json 的 scripts 中增加如下配置
+```
+{
+  "scripts": {
+    "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .ts 的文件",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0"
+  }
+}
+```
+
+## 3.5 写在最后
+- 参考资料：
+https://juejin.cn/post/6901552013717438472#heading-10
