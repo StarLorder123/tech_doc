@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <title>持续更新</title>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="var(--dragon-red)"/>
+    </marker>
+  </defs>
+  
+  <!-- 科技风网格背景 -->
+  <g opacity="0.06">
+    <defs>
+      <pattern id="updateGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+        <path d="M 25 0 L 0 0 0 25" fill="none" stroke="var(--dragon-red)" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="200" height="200" fill="url(#updateGrid)"/>
+  </g>
+  
+  <!-- 主循环系统 - 扁平化 -->
+  <g transform="translate(100, 100)">
+    <!-- 外层循环路径 -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="var(--dragon-red)" stroke-width="2" opacity="0.8"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="var(--dragon-red)" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 内层循环路径 -->
+    <circle cx="0" cy="0" r="20" fill="none" stroke="var(--dragon-red)" stroke-width="1" opacity="0.6"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="var(--dragon-red)" stroke-width="1" opacity="0.4" stroke-dasharray="3,3">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 中心更新图标 - 线条风格 -->
+    <g>
+      <!-- 上传符号 -->
+      <rect x="-8" y="-8" width="16" height="16" fill="none" stroke="var(--dragon-red)" stroke-width="2"/>
+      <rect x="-6" y="-6" width="12" height="12" fill="var(--dragon-red)" opacity="0.1"/>
+      
+      <!-- 上传箭头 -->
+      <path d="M 0 4 L 0 -4 M -3 -1 L 0 -4 L 3 -1" fill="none" stroke="var(--dragon-red)" stroke-width="2"/>
+      
+      <!-- 数据点 -->
+      <circle cx="0" cy="2" r="1" fill="var(--dragon-red)">
+        <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- 方向箭头 -->
+    <g opacity="0.8">
+      <path d="M 30 -15 L 35 -10" stroke="var(--dragon-red)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+      <path d="M 15 30 L 10 35" stroke="var(--dragon-red)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+      <path d="M -30 15 L -35 10" stroke="var(--dragon-red)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+      <path d="M -15 -30 L -10 -35" stroke="var(--dragon-red)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+  </g>
+  
+  <!-- 版本节点 - 科技风格 -->
+  <g opacity="0.7">
+    <!-- 版本1 -->
+    <g transform="translate(50, 50)">
+      <rect x="-4" y="-4" width="8" height="8" fill="none" stroke="var(--dragon-red)" stroke-width="1"/>
+      <rect x="-2" y="-2" width="4" height="4" fill="var(--dragon-red)" opacity="0.5"/>
+    </g>
+    
+    <!-- 版本2 - 当前活跃 -->
+    <g transform="translate(150, 50)">
+      <rect x="-5" y="-5" width="10" height="10" fill="none" stroke="var(--dragon-red)" stroke-width="2"/>
+      <rect x="-3" y="-3" width="6" height="6" fill="var(--dragon-red)" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- 版本3 -->
+    <g transform="translate(150, 150)">
+      <rect x="-4" y="-4" width="8" height="8" fill="none" stroke="var(--dragon-red)" stroke-width="1"/>
+      <rect x="-2" y="-2" width="4" height="4" fill="var(--dragon-red)" opacity="0.5"/>
+    </g>
+    
+    <!-- 版本4 - 未来 -->
+    <g transform="translate(50, 150)">
+      <rect x="-4" y="-4" width="8" height="8" fill="none" stroke="var(--dragon-red)" stroke-width="1" stroke-dasharray="2,2"/>
+      <rect x="-2" y="-2" width="4" height="4" fill="var(--dragon-red)" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+  
+  <!-- 连接线 - 数据流 -->
+  <g opacity="0.4">
+    <line x1="50" y1="50" x2="70" y2="70" stroke="var(--dragon-red)" stroke-width="1"/>
+    <line x1="150" y1="50" x2="130" y2="70" stroke="var(--dragon-red)" stroke-width="1"/>
+    <line x1="150" y1="150" x2="130" y2="130" stroke="var(--dragon-red)" stroke-width="1"/>
+    <line x1="50" y1="150" x2="70" y2="130" stroke="var(--dragon-red)" stroke-width="1"/>
+  </g>
+  
+  <!-- 底部状态栏 -->
+  <g transform="translate(100, 175)">
+    <rect x="-50" y="-2" width="100" height="4" fill="none" stroke="var(--dragon-red)" stroke-width="1"/>
+    <rect x="-50" y="-2" width="60" height="4" fill="var(--dragon-red)" opacity="0.3">
+      <animate attributeName="width" values="60;80;60" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- 状态指示点 -->
+    <circle cx="35" cy="0" r="2" fill="var(--dragon-red)">
+      <animate attributeName="cx" values="35;40;35" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

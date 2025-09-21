@@ -4,27 +4,174 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* DragonOrigin's Tech Doc - 黑色红色主题 */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* 浅色模式 - 使用较暗的红色 */
+  --ifm-color-primary: #b91c1c;
+  --ifm-color-primary-dark: #991b1b;
+  --ifm-color-primary-darker: #7f1d1d;
+  --ifm-color-primary-darkest: #6b1c1c;
+  --ifm-color-primary-light: #dc2626;
+  --ifm-color-primary-lighter: #ef4444;
+  --ifm-color-primary-lightest: #f87171;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(185, 28, 28, 0.1);
+  
+  /* DragonOrigin 浅色模式颜色 */
+  --dragon-red: #b91c1c;
+  --dragon-red-dark: #7f1d1d;
+  --dragon-red-light: #dc2626;
+  --dragon-black: #1f2937;
+  --dragon-gray: #4b5563;
+  --dragon-gray-light: #6b7280;
+  --dragon-bg-primary: #ffffff;
+  --dragon-bg-secondary: #f9fafb;
+  --dragon-text-primary: #111827;
+  --dragon-text-secondary: #374151;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* 深色模式 - 强化黑红主题 */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #dc2626;
+  --ifm-color-primary-dark: #b91c1c;
+  --ifm-color-primary-darker: #991b1b;
+  --ifm-color-primary-darkest: #7f1d1d;
+  --ifm-color-primary-light: #ef4444;
+  --ifm-color-primary-lighter: #f87171;
+  --ifm-color-primary-lightest: #fca5a5;
+  --docusaurus-highlighted-code-line-bg: rgba(220, 38, 38, 0.15);
+  --ifm-background-color: #0f0f0f;
+  --ifm-background-surface-color: #1a1a1a;
+  
+  /* DragonOrigin 深色模式颜色 */
+  --dragon-red: #dc2626;
+  --dragon-red-dark: #991b1b;
+  --dragon-red-light: #ef4444;
+  --dragon-black: #111827;
+  --dragon-gray: #374151;
+  --dragon-gray-light: #9ca3af;
+  --dragon-bg-primary: #0f0f0f;
+  --dragon-bg-secondary: #1a1a1a;
+  --dragon-text-primary: #f9fafb;
+  --dragon-text-secondary: #d1d5db;
+}
+
+/* DragonOrigin 品牌样式 */
+.dragon-brand {
+  background: linear-gradient(135deg, var(--dragon-red) 0%, var(--dragon-red-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+}
+
+/* 龙纹装饰效果 */
+.dragon-decoration::before {
+  content: '🐉';
+  margin-right: 0.5rem;
+  font-size: 1.2em;
+}
+
+/* 科技感网格背景 */
+.tech-grid-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-grid-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(220, 38, 38, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 38, 38, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* 发光按钮效果 */
+.dragon-button {
+  position: relative;
+  background: linear-gradient(135deg, var(--dragon-red) 0%, var(--dragon-red-dark) 100%);
+  border: 2px solid var(--dragon-red);
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.dragon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.5);
+  background: linear-gradient(135deg, var(--dragon-red-light) 0%, var(--dragon-red) 100%);
+}
+
+.dragon-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--dragon-red), var(--dragon-red-light), var(--dragon-red));
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dragon-button:hover::before {
+  opacity: 1;
+  animation: borderGlow 1.5s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* 技术统计区域深浅色模式 */
+[data-theme='light'] .tech-stats {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%) !important;
+  border-top: 1px solid rgba(185, 28, 28, 0.2) !important;
+  border-bottom: 1px solid rgba(185, 28, 28, 0.2) !important;
+}
+
+[data-theme='dark'] .tech-stats {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%) !important;
+  border-top: 1px solid rgba(220, 38, 38, 0.3) !important;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.3) !important;
+}
+
+/* 快速访问区域深浅色模式 */
+[data-theme='light'] .quick-access-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(185, 28, 28, 0.2) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .quick-access-card {
+  background: rgba(26, 26, 26, 0.8) !important;
+  border: 1px solid rgba(220, 38, 38, 0.2) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] .quick-access-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--dragon-red) !important;
+}
+
+[data-theme='dark'] .quick-access-card:hover {
+  box-shadow: 0 8px 16px rgba(220, 38, 38, 0.3);
+  border-color: var(--dragon-red-light) !important;
 }

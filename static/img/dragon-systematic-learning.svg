@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <title>系统化学习</title>
+  <defs>
+    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 6 2, 0 4" fill="var(--dragon-red)"/>
+    </marker>
+  </defs>
+  
+  <!-- 简洁的学习路径 -->
+  <g transform="translate(100, 100)">
+    <!-- 基础 -->
+    <circle cx="-50" cy="20" r="15" fill="none" stroke="var(--dragon-red)" stroke-width="2"/>
+    <circle cx="-50" cy="20" r="10" fill="var(--dragon-red)" opacity="0.1"/>
+    
+    <!-- 进阶 -->
+    <circle cx="0" cy="0" r="18" fill="none" stroke="var(--dragon-red)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="13" fill="var(--dragon-red)" opacity="0.15"/>
+    
+    <!-- 精通 -->
+    <circle cx="50" cy="-20" r="22" fill="none" stroke="var(--dragon-red)" stroke-width="2"/>
+    <circle cx="50" cy="-20" r="17" fill="var(--dragon-red)" opacity="0.2"/>
+    
+    <!-- 清晰的连接线 -->
+    <path d="M -35 15 L -18 5" stroke="var(--dragon-red)" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+    <path d="M 18 -5 L 35 -15" stroke="var(--dragon-red)" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.8"/>
+  </g>
+  
+  <!-- 底部进度指示 -->
+  <g transform="translate(100, 170)" opacity="0.6">
+    <line x1="-60" y1="0" x2="60" y2="0" stroke="var(--dragon-red)" stroke-width="2"/>
+    <circle cx="-40" cy="0" r="3" fill="var(--dragon-red)"/>
+    <circle cx="0" cy="0" r="3" fill="var(--dragon-red)"/>
+    <circle cx="40" cy="0" r="3" fill="var(--dragon-red)" opacity="0.5"/>
+  </g>
+</svg>

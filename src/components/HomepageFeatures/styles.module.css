@@ -1,11 +1,152 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
+  background: linear-gradient(180deg, var(--dragon-bg-primary) 0%, var(--dragon-bg-secondary) 100%);
+  position: relative;
+}
+
+/* 浅色模式特性区域 */
+[data-theme='light'] .features {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* 深色模式特性区域 */
+[data-theme='dark'] .features {
+  background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
+
+.features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(var(--dragon-red) 1px, transparent 1px),
+    linear-gradient(90deg, var(--dragon-red) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* 浅色模式网格 */
+[data-theme='light'] .features::before {
+  opacity: 0.03;
+}
+
+/* 深色模式网格 */
+[data-theme='dark'] .features::before {
+  opacity: 0.05;
+}
+
+.features .container {
+  position: relative;
+  z-index: 1;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 160px;
+  width: 160px;
+  filter: drop-shadow(0 4px 8px rgba(220, 38, 38, 0.3));
+  transition: all 0.3s ease;
+}
+
+/* DragonOrigin SVG 样式优化 */
+.featureSvg[src*="dragon-"] {
+  /* 确保DragonOrigin SVG的颜色变量正确应用 */
+  --dragon-red: #b91c1c;
+  --dragon-red-dark: #7f1d1d;
+  --dragon-red-light: #dc2626;
+}
+
+[data-theme='dark'] .featureSvg[src*="dragon-"] {
+  --dragon-red: #dc2626;
+  --dragon-red-dark: #991b1b;
+  --dragon-red-light: #ef4444;
+}
+
+.featureCard {
+  background: var(--dragon-bg-secondary);
+  border: 1px solid var(--dragon-red);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* 浅色模式卡片 */
+[data-theme='light'] .featureCard {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(185, 28, 28, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* 深色模式卡片 */
+[data-theme='dark'] .featureCard {
+  background: rgba(26, 26, 26, 0.8);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--dragon-red), transparent);
+  transition: left 0.5s ease;
+}
+
+.featureCard:hover::before {
+  left: 100%;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--dragon-red);
+}
+
+/* 浅色模式悬停效果 */
+[data-theme='light'] .featureCard:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--dragon-red);
+}
+
+/* 深色模式悬停效果 */
+[data-theme='dark'] .featureCard:hover {
+  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.2);
+}
+
+.featureCard:hover .featureSvg {
+  transform: scale(1.1);
+}
+
+/* 浅色模式图标悬停 */
+[data-theme='light'] .featureCard:hover .featureSvg {
+  filter: drop-shadow(0 8px 16px rgba(185, 28, 28, 0.3));
+}
+
+/* 深色模式图标悬停 */
+[data-theme='dark'] .featureCard:hover .featureSvg {
+  filter: drop-shadow(0 8px 16px rgba(220, 38, 38, 0.5));
+}
+
+.featureTitle {
+  color: var(--dragon-red-light);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.featureDescription {
+  color: var(--dragon-gray-light);
+  line-height: 1.6;
 }
